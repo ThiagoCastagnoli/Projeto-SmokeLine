@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@id/smokesFragment"
+        android:title="Smokes"
+        android:icon="@drawable/smolk_icon"
+
+        />
+
+    <item
+        android:id="@id/flashFragment"
+        android:title="Flash"
+        android:icon="@drawable/flash_icoon"/>
+
+    <item
+        android:id="@id/molloFragment"
+        android:title="Mollo"
+        android:icon="@drawable/mollotov_icon"/>
+
+    <item
+        android:id="@id/favoritosFragment"
+        android:title="Favoritos"
+        android:icon="@drawable/star_icon"
+        />
+
+</menu>

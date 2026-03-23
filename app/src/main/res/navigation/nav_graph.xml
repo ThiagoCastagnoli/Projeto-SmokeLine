@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeActivity"
+    app:startDestination="@id/homepageFrament">
+    <fragment
+        tools:layout="@layout/home_page"
+        android:id="@+id/homepageFrament"
+        android:name="com.example.smolkline.Fragments.HomePageFraments"
+        android:label="homepageFrament" >
+        <action
+            android:id="@+id/action_homepageFrament_to_home_screen"
+            app:destination="@id/home_screen"
+
+
+            />
+    </fragment>
+
+
+    <fragment android:id="@+id/home_screen"
+        tools:layout="@layout/smokes_fragment"
+        android:name="com.example.smolkline.Fragments.SmokesFragment"/>
+
+
+
+    <fragment
+        tools:layout="@layout/smokes_fragment"
+        android:id="@+id/smokesFragment"
+        android:name = "com.example.smolkline.Fragments.SmokesFragment"
+        android:label="Smokes" />
+
+    <fragment
+        tools:layout="@layout/flash_fragment"
+        android:id="@+id/flashFragment"
+        android:name="com.example.smolkline.Fragments.FlashFragment"
+        android:label="Flash" />
+
+    <fragment
+        tools:layout="@layout/mollo_fragment"
+        android:id="@+id/molloFragment"
+        android:name="com.example.smolkline.Fragments.MolloFragment"
+        android:label="Mollo" />
+
+    <fragment
+        android:id="@+id/favoritosFragment"
+        android:name="com.example.smolkline.Fragments.FavoritosFragment"
+        android:label="Favoritos" />
+
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.example.smolkline.Fragments.VideoFragment"
+        android:label="Video" />
+        <action
+            android:id="@+id/action_homeFragment_to_videoFragment"
+            app:destination="@id/videoFragment"/>
+
+            <argument
+                android:name="video"
+                app:argType="string" />
+</navigation>
