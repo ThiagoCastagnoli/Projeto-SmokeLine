@@ -50,7 +50,8 @@
     <fragment
         android:id="@+id/videoFragment"
         android:name="com.example.smolkline.Fragments.VideoFragment"
-        android:label="Video" />
+        android:label="Video"
+        tools:layout="@layout/videos_fragment"/>
         <action
             android:id="@+id/action_homeFragment_to_videoFragment"
             app:destination="@id/videoFragment"/>
@@ -58,4 +59,14 @@
             <argument
                 android:name="video"
                 app:argType="string" />
+
+    <fragment
+        android:id="@+id/videoFlash"
+        android:name="com.example.smolkline.Fragments.VideoFragment"
+        android:label="video"
+        tools:layout="@layout/videoflash_fragment"/>
+        <action
+            android:id="@+id/action_homeFragment_to_videoFlash_fragment"
+            app:destination="@id/videoFlash"
+        />
 </navigation>
