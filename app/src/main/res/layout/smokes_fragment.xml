@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#111111">
+    android:background="@drawable/backgorund_login">
 
 
 
@@ -98,8 +98,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerMaps"
-        android:layout_width="0dp"
-        android:layout_height="130dp"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
         android:layout_marginTop="12dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -130,7 +130,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="12dp"
-        android:paddingBottom="80dp"
         app:layout_constraintBottom_toTopOf="@id/bottomMenu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

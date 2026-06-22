@@ -17,41 +17,13 @@ class LoginFragment : Fragment(R.layout.home_page) {
 
         _binding = HomePageBinding.bind(view)
 
-        binding.button.alpha = 0f
 
-        binding.button.animate()
-            .translationY(8f)
-            .setDuration(200)
-            .withEndAction {
-                binding.button.animate()
-                    .translationY(0f)
-                    .setDuration(200)
-            }
 
-        binding.button.animate()
-            .alpha(1f)
-            .setDuration(2000)
-            .start()
 
         binding.button.setOnClickListener {
-
-            it.animate()
-                .scaleX(0.95f)
-                .scaleY(0.95f)
-                .setDuration(80)
-                .withEndAction {
-
-                    it.animate()
-                        .scaleX(1f)
-                        .scaleY(1f)
-                        .setDuration(80)
-                        .start()
-
-                    findNavController()
-                        .navigate(R.id.action_homepageFrament_to_home_screen)
-                }
-                .start()
-
+            findNavController().navigate(
+                R.id.action_homepageFrament_to_home_screen
+            )
         }
 
         binding.txtRegister.setOnClickListener {
@@ -59,6 +31,7 @@ class LoginFragment : Fragment(R.layout.home_page) {
                 R.id.action_homePageFragment_to_cadastroFragment
             )
         }
+
     }
 
     override fun onDestroyView() {
