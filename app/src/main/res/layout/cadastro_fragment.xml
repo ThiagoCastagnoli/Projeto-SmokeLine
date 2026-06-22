@@ -6,8 +6,9 @@
     android:id="@+id/cadastroFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#050816"
-    tools:context=".MainActivity">
+    android:background="@drawable/backgorund_login"
+    tools:context=".MainActivity"
+    >
 
     <ScrollView
         android:layout_width="match_parent"
@@ -24,17 +25,27 @@
 
 
 
-            <ImageView
-                android:id="@+id/imgHeader"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="230dp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="20dp"
-                android:adjustViewBounds="true"
-                android:padding="30dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/logo_smoke" />
+                android:layout_height="wrap_content">
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/imgHeader"
+                    android:layout_width="400dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="32dp"
+                    android:adjustViewBounds="true"
+                    android:padding="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo_smoke"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/RoundedImage" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
@@ -100,8 +111,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="textPersonName"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#6F7789"/>
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/white"/>
                     </com.google.android.material.textfield.TextInputLayout>
 
 
