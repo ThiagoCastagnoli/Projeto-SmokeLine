@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "115594343445",
+    "project_id": "smokeline-df4e0",
+    "storage_bucket": "smokeline-df4e0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:115594343445:android:473be5984b309f54130a1c",
+        "android_client_info": {
+          "package_name": "com.example.smolkline"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGPNHUlkIvTGiR-wz9gLpvjWOMgatqn08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

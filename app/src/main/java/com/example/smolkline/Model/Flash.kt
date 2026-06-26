@@ -1,6 +1,6 @@
-package com.example.smolkline.Classes
+package com.example.smolkline.Model
 
-data class Mollo (
+data class Flash(
     val titulo: String,
     val subTitulo: String,
     val image: Int

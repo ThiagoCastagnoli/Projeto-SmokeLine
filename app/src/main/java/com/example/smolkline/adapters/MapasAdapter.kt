@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.smolkline.Classes.Mapas
+import com.example.smolkline.Model.Mapas
 import com.example.smolkline.R
 
 class MapasAdapter(private val lista: List<Mapas>):

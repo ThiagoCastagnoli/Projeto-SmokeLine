@@ -8,10 +8,8 @@ import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.example.smolkline.Classes.Smolk
-import com.example.smolkline.Fragments.LoginFragment
+import com.example.smolkline.Model.Smolk
 import com.example.smolkline.Fragments.LoginFragmentDirections
-import com.example.smolkline.Fragments.SmokesFragment
 import com.example.smolkline.R
 
  class SmolkAdapter(

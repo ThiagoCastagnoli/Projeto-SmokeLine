@@ -6,8 +6,8 @@ import android.os.Looper
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.smolkline.Classes.Mapas
-import com.example.smolkline.Classes.Smolk
+import com.example.smolkline.Model.Mapas
+import com.example.smolkline.Model.Smolk
 import com.example.smolkline.R
 import com.example.smolkline.adapters.MapasAdapter
 import com.example.smolkline.adapters.BannerAdapter

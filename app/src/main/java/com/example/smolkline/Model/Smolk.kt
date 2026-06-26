@@ -1,4 +1,4 @@
-package com.example.smolkline.Classes
+package com.example.smolkline.Model
 
 data class Smolk(
    val titulo: String,
