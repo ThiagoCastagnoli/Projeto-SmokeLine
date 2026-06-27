@@ -31,9 +31,12 @@ class CadastroFragment : Fragment(R.layout.cadastro_fragment) {
 
         }
 
+
+
+
         binding.btnRegister.setOnClickListener {
 
-           val usuario = binding.edtUsername.text.toString().trim()
+
            val email = binding.edtEmail.text.toString().trim()
            val senha =  binding.edtPassword.text.toString().trim()
            val confirmSenha = binding.edtConfirmPassword.text.toString().trim()
@@ -42,6 +45,7 @@ class CadastroFragment : Fragment(R.layout.cadastro_fragment) {
                 Toast.makeText(requireContext(), "digite seu email", Toast.LENGTH_SHORT).show()
 
             }
+
             else if ( senha.isEmpty() ){
                 Toast.makeText(requireContext(), "digite sua senha", Toast.LENGTH_SHORT).show()
             }
