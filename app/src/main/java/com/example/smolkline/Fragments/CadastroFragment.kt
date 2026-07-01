@@ -42,15 +42,21 @@ class CadastroFragment : Fragment(R.layout.cadastro_fragment) {
            val confirmSenha = binding.edtConfirmPassword.text.toString().trim()
 
             if( email.isEmpty() ){
-                Toast.makeText(requireContext(), "digite seu email", Toast.LENGTH_SHORT).show()
+                binding.tilEmail.error = "Digite seu E-mail"
 
             }
-
-            else if ( senha.isEmpty() ){
-                Toast.makeText(requireContext(), "digite sua senha", Toast.LENGTH_SHORT).show()
+            else {
+                binding.tilEmail.error = null
             }
-            else if ( confirmSenha.isEmpty() ){
-                Toast.makeText(requireContext(), "confirme sua senha", Toast.LENGTH_SHORT).show()
+
+            if ( senha.isEmpty() ){
+                binding.tillSenha.error = "Digite sua Senha"
+            }
+            else {
+                binding.tillSenha.error = null
+            }
+             if ( confirmSenha.isEmpty() ){
+                binding.tillConSenha.error = "confirme sua Senha "
             }
             else { auth.createUserWithEmailAndPassword(email, senha)
                 .addOnCompleteListener { task ->
