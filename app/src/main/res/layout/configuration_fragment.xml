@@ -223,7 +223,9 @@
                             android:src="@android:drawable/ic_lock_power_off"
                             app:tint="#FF4D4D"/>
 
-                        <TextView
+                        <Button
+                            android:id="@+id/sairdaconta"
+                            android:backgroundTint="@color/black"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
