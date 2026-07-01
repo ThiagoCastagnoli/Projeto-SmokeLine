@@ -196,43 +196,18 @@
                     app:iconPadding="12dp"
                     app:iconTint="@null"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     app:strokeColor="#1B2940"
                     app:strokeWidth="1dp" />
 
 
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content" >
-
-
-    <com.google.android.material.button.MaterialButton
-
-        android:layout_width="192dp"
-        android:layout_height="49dp"
-        android:text="Continue com FaceBook"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="10sp"
-        app:backgroundTint="#131D33"
-        app:cornerRadius="18dp"
-        app:icon="@drawable/facebook"
-        app:iconGravity="textStart"
-        app:iconPadding="12dp"
-        app:iconTint="@null"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:strokeColor="#1B2940"
-        app:strokeWidth="1dp" />
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:layout_height="wrap_content" />
 
 
 

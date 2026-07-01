@@ -12,7 +12,20 @@
           "package_name": "com.example.smolkline"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "115594343445-0m4r5i0lkbs5tacuf4fejfh6arceqpvv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.smolkline",
+            "certificate_hash": "61d709d1cd0641ef7acbc17de1883bcc053e7869"
+          }
+        },
+        {
+          "client_id": "115594343445-d6qi67gsqbivvom5sndq65n4un2kfa8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCGPNHUlkIvTGiR-wz9gLpvjWOMgatqn08"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "115594343445-d6qi67gsqbivvom5sndq65n4un2kfa8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

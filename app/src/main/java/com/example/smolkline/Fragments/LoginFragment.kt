@@ -3,16 +3,62 @@ package com.example.smolkline.Fragments
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
+import androidx.navigation.ActivityNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import com.example.smolkline.R
 import com.example.smolkline.databinding.HomePageBinding
+import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.api.ApiException
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
+import android.app.Activity
 
 class LoginFragment : Fragment(R.layout.home_page) {
 
+
+    private fun firebaseAuthWithGoogle(idToken: String) {
+        val credential = GoogleAuthProvider.getCredential(idToken, null)
+        auth.signInWithCredential(credential)
+            .addOnCompleteListener(requireActivity()) { task ->
+                if (task.isSuccessful){
+                    Toast.makeText(
+                        requireContext(),
+                        "Login realizado com sucesso",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    findNavController().navigate(R.id.action_homepageFrament_to_home_screen)
+
+                }
+                else {
+                    Toast.makeText(
+                        requireContext(),
+                        task.exception?.message ?: "Erro no login",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            }
+
+    }
+
+
+    private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
+
+            try {
+                val account = task.getResult(ApiException::class.java)
+                firebaseAuthWithGoogle(account.idToken!!)
+
+            }
+            catch (e: ApiException){
+                e.printStackTrace()
+            }
+        }
+    }
     private lateinit var googleSignInClient: GoogleSignInClient
     private lateinit var auth: FirebaseAuth
     private var _binding: HomePageBinding? = null
@@ -24,7 +70,13 @@ class LoginFragment : Fragment(R.layout.home_page) {
         _binding = HomePageBinding.bind(view)
 
 
+
         val google = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id))
+            .requestEmail()
+            .build()
+
+        googleSignInClient = GoogleSignIn.getClient(requireActivity(), google)
 
 
 
@@ -62,6 +114,14 @@ class LoginFragment : Fragment(R.layout.home_page) {
             findNavController().navigate(
                 R.id.action_homePageFragment_to_cadastroFragment
             )
+        }
+        binding.btnGoogle.setOnClickListener {
+
+
+            val signInIntent = googleSignInClient.signInIntent
+            launcher.launch(signInIntent)
+
+
         }
 
     }
