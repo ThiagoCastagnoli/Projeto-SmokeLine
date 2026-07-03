@@ -21,7 +21,7 @@
     <item
         android:id="@id/configFragment"
         android:title="Configurações"
-        android:icon="@drawable/definicoes"
+        android:icon="@drawable/config"
         />
 
 </menu>
