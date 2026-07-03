@@ -97,7 +97,27 @@ Além disso, o projeto serve como uma oportunidade para aplicar conhecimentos em
 
 # 📸 Screenshots
 
-> Em breve...
+# Tela de login (Com validação API)
+
+<img width="738" height="1600" alt="3" src="https://github.com/user-attachments/assets/18d28e6f-4849-4231-a86a-8f2c00a76dd4" />
+
+
+# Tela de Cadastro (Com validação API)
+
+<img width="738" height="1600" alt="2" src="https://github.com/user-attachments/assets/c902966a-3ea2-4880-9ffe-3ff7c9c06720" />
+
+# Validação e Login Com Google
+
+<img width="738" height="1600" alt="4" src="https://github.com/user-attachments/assets/586d3882-68d7-4747-85fe-1fa8ba3552c4" />
+
+# Tela HomePage
+
+<img width="738" height="1600" alt="1" src="https://github.com/user-attachments/assets/e6b9781e-6f81-4d85-89b6-18d29e313ed1" />
+
+## Mais imagens estão por vir...
+
+
+
 
 ---
 
