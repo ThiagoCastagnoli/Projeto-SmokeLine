@@ -48,11 +48,6 @@
         android:label="Mollo" />
 
     <fragment
-        android:id="@+id/favoritosFragment"
-        android:name="com.example.smolkline.Fragments.ConfigurationFragment"
-        android:label="Favoritos" />
-
-    <fragment
         android:id="@+id/videoFragment"
         android:name="com.example.smolkline.Fragments.VideoFragment"
         android:label="Video"
@@ -86,5 +81,14 @@
         <action
             android:id="@+id/action_cadastroFragment_to_homepageFrament"
             app:destination="@id/homepageFrament" />
-    </fragment>/>
+    </fragment>
+    <fragment
+        tools:layout="@layout/configuration_fragment"
+        android:id="@+id/configFragment"
+        android:name="com.example.smolkline.Fragments.ConfigurationFragment"
+        android:label="ConfigurationFragment" >
+        <action
+            android:id="@+id/action_configurationFragment_to_homepageFrament"
+            app:destination="@id/homepageFrament" />
+    </fragment>
 </navigation>

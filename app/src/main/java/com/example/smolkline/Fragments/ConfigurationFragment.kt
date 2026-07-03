@@ -47,7 +47,7 @@ class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
                     Toast.LENGTH_SHORT
                 ).show()
 
-                findNavController().navigate(R.id.action_homePageFragment_to_cadastroFragment)
+                findNavController().navigate(R.id.action_configurationFragment_to_homepageFrament)
             }
         }
     }

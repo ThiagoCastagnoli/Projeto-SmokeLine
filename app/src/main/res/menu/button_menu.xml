@@ -19,7 +19,7 @@
         android:title="Mollo" />
 
     <item
-        android:id="@id/favoritosFragment"
+        android:id="@id/configFragment"
         android:title="Configurações"
         android:icon="@drawable/definicoes"
         />
