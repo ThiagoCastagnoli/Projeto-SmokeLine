@@ -88,15 +88,21 @@ class LoginFragment : Fragment(R.layout.home_page) {
             val loginPassword = binding.edtLoginPassword.text.toString().trim()
 
             if (loginEmail.isEmpty()) {
-                Toast.makeText(requireContext(), "digite seu email", Toast.LENGTH_SHORT).show()
-            }
-            else if (loginPassword.isEmpty()){
-
-                Toast.makeText(requireContext(), "digite sua senha", Toast.LENGTH_SHORT).show()
-
+                binding.tillEmailLog.error = "Digite seu E-mail"
             }
             else {
-                auth.signInWithEmailAndPassword(loginEmail, loginPassword)
+                binding.tillEmailLog.error = null
+            }
+             if (loginPassword.isEmpty()){
+
+                binding.tillSenhaLog.error = "Digite Sua senha"
+
+            }
+
+            else{
+                binding.tillSenhaLog.error = null
+
+                 auth.signInWithEmailAndPassword(loginEmail, loginPassword)
                     .addOnCompleteListener { task ->
                         if(task.isSuccessful){
                             Toast.makeText(requireContext(), "Login realizado com sucesso", Toast.LENGTH_SHORT).show()
