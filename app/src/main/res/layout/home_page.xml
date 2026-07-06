@@ -134,6 +134,13 @@
                         android:textSize="14sp"
                         android:textStyle="bold"/>
 
+                    <ProgressBar
+                        android:id="@+id/progressBarLogin"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"/>
+
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/button"
                         android:layout_width="match_parent"
@@ -177,6 +184,13 @@
 
 
             </com.google.android.material.card.MaterialCardView>
+
+            <ProgressBar
+                android:id="@+id/progressBarGoogle"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"

@@ -45,6 +45,7 @@ class LoginFragment : Fragment(R.layout.home_page) {
     }
 
 
+
     private val launcher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(result.data)
@@ -79,42 +80,66 @@ class LoginFragment : Fragment(R.layout.home_page) {
         googleSignInClient = GoogleSignIn.getClient(requireActivity(), google)
 
 
-
-
+        val progressBarLogin = binding.progressBarLogin
+        val progressBarGoogle = binding.progressBarGoogle
+        val buttonLogin = binding.button
+        val buttonGoogle = binding.btnGoogle
 
         binding.button.setOnClickListener {
+
 
             val loginEmail = binding.edtEmailLogin.text.toString().trim()
             val loginPassword = binding.edtLoginPassword.text.toString().trim()
 
-            if (loginEmail.isEmpty()) {
+
+            if (loginEmail.isEmpty() ) {
+
                 binding.tillEmailLog.error = "Digite seu E-mail"
+
             }
             else {
+
                 binding.tillEmailLog.error = null
+
             }
              if (loginPassword.isEmpty()){
 
                 binding.tillSenhaLog.error = "Digite Sua senha"
 
+
+                 progressBarLogin.visibility = View.GONE
+                 buttonLogin.visibility = View.VISIBLE
             }
 
             else{
+
                 binding.tillSenhaLog.error = null
 
+
+                 progressBarLogin.visibility = View.VISIBLE
+                 buttonLogin.visibility = View.GONE
                  auth.signInWithEmailAndPassword(loginEmail, loginPassword)
                     .addOnCompleteListener { task ->
                         if(task.isSuccessful){
+
                             Toast.makeText(requireContext(), "Login realizado com sucesso", Toast.LENGTH_SHORT).show()
                             findNavController().navigate(R.id.action_homepageFrament_to_home_screen)
+
                         }
+
                         else {
+                            progressBarLogin.visibility = View.VISIBLE
                             Toast.makeText(requireContext(), "email ou senha invalido ", Toast.LENGTH_SHORT).show()
+
                         }
+                        progressBarLogin.visibility = View.GONE
+                        buttonLogin.visibility = View.VISIBLE
                     }
 
             }
         }
+
+
 
         binding.txtRegister.setOnClickListener {
             findNavController().navigate(
@@ -122,6 +147,8 @@ class LoginFragment : Fragment(R.layout.home_page) {
             )
         }
         binding.btnGoogle.setOnClickListener {
+            progressBarGoogle.visibility = View.VISIBLE
+            buttonGoogle.visibility = View.GONE
 
 
             val signInIntent = googleSignInClient.signInIntent
