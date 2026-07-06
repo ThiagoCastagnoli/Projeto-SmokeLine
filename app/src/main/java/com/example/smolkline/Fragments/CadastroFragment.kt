@@ -32,7 +32,7 @@ class CadastroFragment : Fragment(R.layout.cadastro_fragment) {
         }
 
 
-
+        val progressBarCadastro = binding.progressBarCadastro
 
         binding.btnRegister.setOnClickListener {
 
@@ -58,15 +58,21 @@ class CadastroFragment : Fragment(R.layout.cadastro_fragment) {
              if ( confirmSenha.isEmpty() ){
                 binding.tillConSenha.error = "confirme sua Senha "
             }
-            else { auth.createUserWithEmailAndPassword(email, senha)
+
+            else {
+                progressBarCadastro.visibility = View.VISIBLE
+                auth.createUserWithEmailAndPassword(email, senha)
                 .addOnCompleteListener { task ->
                     if(task.isSuccessful){
                         Toast.makeText(requireContext(), "seu cadastro foi feito com Sucesso", Toast.LENGTH_SHORT).show()
+                        findNavController().navigate(R.id.action_cadastroFragment_to_home_screen)
                     }
                     else {
                         Toast.makeText(requireContext(), "erro: Usuário ou E-mail invalido ", Toast.LENGTH_SHORT).show()
                     }
+                    progressBarCadastro.visibility = View.GONE
                 }}
+
 
         }
 

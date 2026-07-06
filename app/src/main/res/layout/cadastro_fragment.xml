@@ -178,6 +178,12 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
 
+                    <ProgressBar
+                        android:visibility="gone"
+                        android:id="@+id/progressBarCadastro"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnRegister"

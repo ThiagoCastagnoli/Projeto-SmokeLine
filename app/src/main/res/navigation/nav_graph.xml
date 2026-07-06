@@ -81,6 +81,9 @@
         <action
             android:id="@+id/action_cadastroFragment_to_homepageFrament"
             app:destination="@id/homepageFrament" />
+        <action
+            android:id="@+id/action_cadastroFragment_to_home_screen"
+            app:destination="@id/home_screen" />
     </fragment>
     <fragment
         tools:layout="@layout/configuration_fragment"
