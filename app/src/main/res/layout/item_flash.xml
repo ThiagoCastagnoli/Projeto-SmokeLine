@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="145dp"
+    android:layout_marginBottom="18dp"
+    app:cardBackgroundColor="#0D1E37"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <View
+            android:id="@+id/viewAccent"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            android:background="#2D6CFF"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgFlash"
+            android:layout_width="120dp"
+            android:layout_height="110dp"
+            android:layout_marginStart="14dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/RoundedImage"
+            app:layout_constraintStart_toEndOf="@id/viewAccent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+        <ImageButton
+            android:id="@+id/btnFavorite"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="16dp"
+            android:background="@android:color/transparent"
+
+            app:tint="#2D6CFF"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Flash Connector"
+            android:textColor="@android:color/white"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/imgFlash"
+            app:layout_constraintEnd_toStartOf="@id/btnFavorite"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/mapContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="@id/txtTitle"
+            app:layout_constraintTop_toBottomOf="@id/txtTitle">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+
+                app:tint="#7A8CB7"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mirage"
+                android:textColor="#7A8CB7"
+                android:textSize="13sp"
+                android:layout_marginStart="4dp"/>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Flash perfeita para entrar no connector com segurança."
+            android:textColor="#A7B2CF"
+            android:textSize="13sp"
+            android:maxLines="2"
+            app:layout_constraintTop_toBottomOf="@id/mapContainer"
+            app:layout_constraintStart_toStartOf="@id/txtTitle"
+            app:layout_constraintEnd_toStartOf="@id/btnFavorite"/>
+
+        <!-- Botão -->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWatch"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="16dp"
+            android:text="Assistir"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+
+            app:iconGravity="textStart"
+            app:iconTint="@android:color/white"
+            app:backgroundTint="#2D6CFF"
+            app:cornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/txtTitle"/>
+
+
+
+        <ImageButton
+            android:id="@+id/btnMore"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            app:tint="#7A8CB7"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

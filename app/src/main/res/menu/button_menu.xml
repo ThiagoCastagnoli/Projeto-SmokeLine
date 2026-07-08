@@ -15,13 +15,22 @@
         android:icon="@drawable/mapa"/>
 
     <item
-        android:id="@id/molloFragment"
-        android:title="Mollo" />
+        android:id="@+id/salvosFragment"
+        android:title="Salvos"
+        android:icon="@drawable/salvos"/>
+
+
+    <item
+        android:id="@+id/flashFragment"
+        android:title="Flash"
+        android:icon="@drawable/flash"
+        />
 
     <item
         android:id="@id/configFragment"
         android:title="Configurações"
         android:icon="@drawable/config"
         />
+
 
 </menu>
