@@ -139,6 +139,9 @@ class LoginFragment : Fragment(R.layout.home_page) {
             }
         }
 
+        binding.devButton.setOnClickListener {
+            findNavController().navigate(R.id.action_homepageFrament_to_home_screen)
+        }
 
 
         binding.txtRegister.setOnClickListener {

@@ -5,9 +5,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#050816">
+    android:background="@drawable/backgorund_login">
 
-    <!-- HEADER -->
+
 
     <ImageView
         android:id="@+id/btnBack"
@@ -36,7 +36,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="24dp"/>
 
-    <!-- TITULO -->
+
 
     <TextView
         android:id="@+id/txtTitle"
@@ -63,7 +63,7 @@
         app:layout_constraintTop_toBottomOf="@id/txtTitle"
         android:layout_marginTop="6dp"/>
 
-    <!-- FILTROS -->
+
 
     <HorizontalScrollView
         android:id="@+id/filterScroll"
@@ -112,7 +112,7 @@
 
     </HorizontalScrollView>
 
-    <!-- LISTA -->
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerMaps"

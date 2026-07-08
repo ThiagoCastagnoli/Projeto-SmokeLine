@@ -42,10 +42,10 @@
         android:label="Mapas" />
 
     <fragment
-        tools:layout="@layout/mollo_fragment"
-        android:id="@+id/molloFragment"
-        android:name="com.example.smolkline.Fragments.MolloFragment"
-        android:label="Mollo" />
+        tools:layout="@layout/salvos_fragment"
+        android:id="@+id/salvosFragment"
+        android:name="com.example.smolkline.Fragments.SalvosFragment"
+        android:label="Salvos" />
 
     <fragment
         android:id="@+id/videoFragment"
@@ -94,4 +94,9 @@
             android:id="@+id/action_configurationFragment_to_homepageFrament"
             app:destination="@id/homepageFrament" />
     </fragment>
+    <fragment
+        android:id="@+id/flashFragment"
+        tools:layout="@layout/flash_fragment"
+        android:name="com.example.smolkline.Fragments.FlashFragment"
+        />
 </navigation>

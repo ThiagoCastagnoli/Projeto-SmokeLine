@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -142,11 +143,24 @@
                         android:visibility="gone"/>
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/button"
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="28dp"
+                    android:text="ENTRAR"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="#1565FF"
+                    app:cornerRadius="18dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/devButton"
                         android:layout_width="match_parent"
                         android:layout_height="58dp"
                         android:layout_marginTop="28dp"
-                        android:text="ENTRAR"
+                        android:text="I AM DEV"
                         android:textAllCaps="false"
                         android:textColor="#FFFFFF"
                         android:textSize="17sp"
@@ -230,4 +244,4 @@
 
     </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
