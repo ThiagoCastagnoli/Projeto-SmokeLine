@@ -1,12 +1,17 @@
 package com.example.smolkline.Fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
+import android.widget.AdapterView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.os.LocaleListCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.privacysandbox.ads.adservices.appsetid.AppSetId
 import com.example.smolkline.R
+import com.example.smolkline.databinding.ConfigurationFragmentBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
@@ -14,10 +19,45 @@ import com.google.firebase.auth.FirebaseAuth
 
 class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
 
+    private var _binding: ConfigurationFragmentBinding? = null
+    private val binding get() = _binding!!
+
     private lateinit var googleSignInClient: GoogleSignInClient
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
+
+
+
+        fun mudarIdioma(language: String) {
+
+            val appLocale = LocaleListCompat.forLanguageTags(language)
+
+            AppCompatDelegate.setApplicationLocales(appLocale)
+        }
+
+        binding.spinnerLanguage.onItemSelectedListener =
+            object : AdapterView.OnItemSelectedListener {
+
+                override fun onItemSelected(
+                    parent: AdapterView<*>?,
+                    view: View?,
+                    position : Int,
+                    id: Long
+                )
+                {
+                    when (position){
+                        0 -> mudarIdioma("pt-BR")
+                        1 -> mudarIdioma("en")
+                    }
+                }
+                override fun onNothingSelected(parent: AdapterView<*>?) {}
+
+            }
+
+        _binding = ConfigurationFragmentBinding.bind(view)
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
@@ -26,9 +66,7 @@ class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
 
         googleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
 
-        val btnLogout = view.findViewById<Button>(R.id.sairdaconta)
-
-        btnLogout.setOnClickListener {
+        binding.sairdaconta.setOnClickListener {
             logout()
         }
     }
@@ -50,5 +88,10 @@ class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
                 findNavController().navigate(R.id.action_configurationFragment_to_homepageFrament)
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }

@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">SmokeLine</string>
     <string name="default_web_client_id">SEU_WEB_CLIENT_ID_AQUI</string>
+    <string name="login">Entrar</string>
+    <string name="email">E-mail</string>
+    <string name="password">Senha</string>
+    <string name="language">Linguagem</string>
 </resources>
