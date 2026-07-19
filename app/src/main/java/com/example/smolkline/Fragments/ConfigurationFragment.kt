@@ -27,9 +27,7 @@ class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-
-
+        _binding = ConfigurationFragmentBinding.bind(view)
 
         fun mudarIdioma(language: String) {
 
@@ -57,7 +55,7 @@ class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
 
             }
 
-        _binding = ConfigurationFragmentBinding.bind(view)
+
 
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(getString(R.string.default_web_client_id))
