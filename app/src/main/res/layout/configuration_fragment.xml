@@ -187,22 +187,22 @@
                         android:padding="16dp">
 
 
-                        <TextView
+                        <ImageView
+                            android:src="@drawable/idioma"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            app:tint="#2F80FF"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:textColor="@color/white"
+                            android:id="@+id/btnLanguage"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/language"
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold"
-                            android:textSize="14sp"
-                            android:layout_marginBottom="8dp"/>
-
-                        <Spinner
-
-
-                            android:id="@+id/spinnerLanguage"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:entries="@array/languages" />
+                            android:drawablePadding="8dp"
+                            android:text="English"
+                            app:cornerRadius="12dp"
+                            android:layout_marginStart="20dp"
+                            android:backgroundTint="@color/black"/>
 
                     </LinearLayout>
 

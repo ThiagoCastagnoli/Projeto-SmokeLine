@@ -15,6 +15,7 @@ import com.example.smolkline.databinding.ConfigurationFragmentBinding
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.auth.FirebaseAuth
 
 class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
@@ -36,24 +37,22 @@ class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
             AppCompatDelegate.setApplicationLocales(appLocale)
         }
 
-        binding.spinnerLanguage.onItemSelectedListener =
-            object : AdapterView.OnItemSelectedListener {
+        binding.btnLanguage.setOnClickListener {
 
-                override fun onItemSelected(
-                    parent: AdapterView<*>?,
-                    view: View?,
-                    position : Int,
-                    id: Long
-                )
-                {
-                    when (position){
+            val idiomas = arrayOf("Português", "English")
+
+            MaterialAlertDialogBuilder(requireContext())
+                .setTitle("Escolha o idioma")
+                .setItems(idiomas) { _, which ->
+
+                    when (which) {
                         0 -> mudarIdioma("pt-BR")
                         1 -> mudarIdioma("en")
                     }
-                }
-                override fun onNothingSelected(parent: AdapterView<*>?) {}
 
-            }
+                }
+                .show()
+        }
 
 
 

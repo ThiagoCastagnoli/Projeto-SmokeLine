@@ -6,4 +6,15 @@
     <string name="password">Senha</string>
     <string name="language">Linguagem</string>
     <string name="SEEALL">VER TODOS</string>
+    <string name="MAPS">MAPAS</string>
+    <string name="POPULARTUTORIALS">TUTORIAIS POPULARES</string>
+    <string name="DominateEveryRound">Entre na ação e domine todas as rodadas.</string>
+    <string name="IForgotMyPassword">Esqueci minha senha</string>
+    <string name="Login">Entrar</string>
+    <string name="DontHaveAccount">Ainda não tem uma conta?</string>
+    <string name="SignUp">Cadastre-Se</string>
+    <string name="ContinueWithGoogle">Continue com Google</string>
+    <string name="EnterYourEmail">Digite seu email</string>
+    <string name="EnterYourPassword">Digite sua senha</string>
+
 </resources>

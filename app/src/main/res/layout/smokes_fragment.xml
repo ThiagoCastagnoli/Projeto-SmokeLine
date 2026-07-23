@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="18dp"
-        android:text="MAPAS"
+        android:text="@string/MAPS"
         android:textColor="@android:color/white"
         android:textSize="26sp"
         android:textStyle="bold"
@@ -116,7 +116,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="16dp"
-        android:text="TUTORIAIS POPULARES"
+        android:text="@string/POPULARTUTORIALS"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -231,7 +231,7 @@
         </LinearLayout>
 
 
-        
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
