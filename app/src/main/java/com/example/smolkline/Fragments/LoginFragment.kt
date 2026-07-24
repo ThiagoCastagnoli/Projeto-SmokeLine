@@ -94,7 +94,7 @@ class LoginFragment : Fragment(R.layout.home_page) {
 
             if (loginEmail.isEmpty() ) {
 
-                binding.tillEmailLog.error = getString(R.string.EnterYourEmail)
+                binding.tillEmailLog.error = getString(R.string.enterYourEmail)
 
             }
             else {
@@ -104,7 +104,7 @@ class LoginFragment : Fragment(R.layout.home_page) {
             }
              if (loginPassword.isEmpty()){
 
-                 binding.tillSenhaLog.error = getString(R.string.EnterYourPassword)
+                 binding.tillSenhaLog.error = getString(R.string.enterYourPassword)
 
 
                  progressBarLogin.visibility = View.GONE

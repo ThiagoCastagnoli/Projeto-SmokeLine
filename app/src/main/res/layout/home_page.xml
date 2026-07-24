@@ -52,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
-                android:text="@string/DominateEveryRound"
+                android:text="@string/dominateEveryRound"
                 android:textColor="#A0A7B8"
                 android:textSize="16sp" />
 
@@ -129,7 +129,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:layout_marginTop="14dp"
-                        android:text="@string/IForgotMyPassword"
+                        android:text="@string/iForgotMyPassword"
                         android:textColor="#2F80FF"
                         android:textSize="14sp"
                         android:textStyle="bold"/>
@@ -177,7 +177,7 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/DontHaveAccount"
+                            android:text="@string/dontHaveAccount"
                             android:textColor="#9B9B9B"
                             android:textSize="14sp"/>
 
@@ -187,7 +187,7 @@
                             android:id="@+id/txtRegister"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/SignUp"
+                            android:text="@string/signUp"
                             android:textColor="#2F80FF"
                             android:textSize="14sp"
                             android:textStyle="bold"/>
@@ -216,7 +216,7 @@
                     android:id="@+id/btnGoogle"
                     android:layout_width="192dp"
                     android:layout_height="49dp"
-                    android:text="@string/ContinueWithGoogle"
+                    android:text="@string/continueWithGoogle"
                     android:textAllCaps="false"
                     android:textColor="#FFFFFF"
                     android:textSize="10sp"

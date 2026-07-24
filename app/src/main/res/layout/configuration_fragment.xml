@@ -35,7 +35,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="14dp"
-                    android:text="@string/Settings"
+                    android:text="@string/settings"
                     android:textColor="#FFFFFF"
                     android:textSize="28sp"
                     android:textStyle="bold"/>
@@ -130,7 +130,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
-                            android:text="@string/EditProfile"
+                            android:text="@string/editProfile"
                             android:textColor="#FFFFFF"
                             android:textSize="16sp"/>
 
@@ -221,7 +221,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
-                            android:text="@string/LogOut"
+                            android:text="@string/logOut"
                             android:textColor="#FF4D4D"
                             android:textSize="16sp"
                             android:textStyle="bold"/>

@@ -44,7 +44,7 @@ class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
             val idiomas = arrayOf("Português", "English")
 
             MaterialAlertDialogBuilder(requireContext())
-                .setTitle("Escolha o idioma")
+                .setTitle(getString(R.string.chooseTheLanguage))
                 .setItems(idiomas) { _, which ->
 
                     when (which) {
