@@ -34,9 +34,8 @@
                     android:id="@+id/imgHeader"
                     android:layout_width="400dp"
                     android:layout_height="200dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="16dp"
                     android:adjustViewBounds="true"
-                    android:padding="20dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/logo_smoke"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
-                android:text="Crie sua conta"
+                android:text="@string/CreateanAccount"
                 android:textColor="#FFFFFF"
                 android:textSize="28sp"
                 android:textStyle="bold" />
@@ -66,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="6dp"
-                android:text="Entre na SmokeLine e domine cada rodada."
+                android:text="@string/GoSmokeLine"
                 android:textColor="#8A8A8A"
                 android:textSize="15sp" />
 
@@ -97,14 +96,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="18dp"
-                        android:hint="E-mail"
+                        android:hint="@string/email"
                         app:boxBackgroundColor="#131D33"
                         app:boxCornerRadiusBottomEnd="18dp"
                         app:boxCornerRadiusBottomStart="18dp"
                         app:boxCornerRadiusTopEnd="18dp"
                         app:boxCornerRadiusTopStart="18dp"
-                        app:boxStrokeColor="#2F80FF"
-                        app:hintTextColor="#6F7789"
+                        app:boxStrokeColor="@color/white"
                         app:startIconDrawable="@android:drawable/ic_dialog_email"
                         app:startIconTint="#2F80FF">
 
@@ -113,8 +111,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:inputType="textEmailAddress"
-                            android:textColor="#FFFFFF"
-                            android:textColorHint="#6F7789"/>
+                            android:textColor="@color/white"
+                            />
                     </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -125,7 +123,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="18dp"
-                        android:hint="Senha"
+                        android:hint="@string/password"
                         app:boxBackgroundColor="#131D33"
                         app:boxCornerRadiusBottomEnd="18dp"
                         app:boxCornerRadiusBottomStart="18dp"
@@ -155,7 +153,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="18dp"
-                        android:hint="Confirmar senha"
+                        android:hint="@string/ConfirmPassword"
                         app:boxBackgroundColor="#131D33"
                         app:boxCornerRadiusBottomEnd="18dp"
                         app:boxCornerRadiusBottomStart="18dp"
@@ -190,7 +188,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="58dp"
                         android:layout_marginTop="28dp"
-                        android:text="CRIAR CONTA"
+                        android:text="@string/CreateanAccount"
                         android:textAllCaps="false"
                         android:textColor="#FFFFFF"
                         android:textSize="17sp"
@@ -210,17 +208,19 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Já possui conta? "
+                            android:text="@string/HaveAccount"
                             android:textColor="#9B9B9B"
                             android:textSize="14sp"/>
 
                         <TextView
+                            android:layout_marginStart="5dp"
+                            android:padding="10dp"
                             android:id="@+id/txtLogin"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Entrar"
+                            android:text="@string/login"
                             android:textColor="#2F80FF"
-                            android:textSize="14sp"
+                            android:textSize="15sp"
                             android:textStyle="bold"/>
 
                     </LinearLayout>

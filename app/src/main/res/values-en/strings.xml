@@ -6,5 +6,28 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="language">Language</string>
+    <string name="MAPS">MAPS</string>
+    <string name="POPULARTUTORIALS">POPULAR TUTORIALS</string>
+    <string name="DominateEveryRound">Get in on the action and dominate every round.</string>
+    <string name="IForgotMyPassword">I forgot my password</string>
+    <string name="Login">Login</string>
+    <string name="DontHaveAccount">Don t have an account yet?</string>
+    <string name="SignUp">Sign-Up</string>
+    <string name="ContinueWithGoogle">Continue with Google</string>
+    <string name="EnterYourEmail">Enter your email</string>
+    <string name="EnterYourPassword">Enter your password</string>
+    <string name="CreateanAccount">Create an account</string>
+    <string name="GoSmokeLine">Enter SmokeLine and dominate every round.</string>
+    <string name="ConfirmPassword">Confirm password</string>
+    <string name="HaveAccount">Do you already have an account?</string>
+    <string name="Saved">Saved</string>
+    <string name="Settings">Settings</string>
+    <string name="EditProfile">Edit Profile</string>
+    <string name="LogOut">Log Out</string>
+    <string name="SeeAll">SEE ALL</string>
+    <string name="SMOKETUTORIALS">Smoke Tutorials</string>
+    <string name="notifications">notifications</string>
+
+
 
 </resources>

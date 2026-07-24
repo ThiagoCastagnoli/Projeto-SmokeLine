@@ -5,4 +5,38 @@
     <string name="email">E-mail</string>
     <string name="password">Senha</string>
     <string name="language">Linguagem</string>
+    <string name="MAPS">MAPAS</string>
+    <string name="POPULARTUTORIALS">TUTORIAIS POPULARES</string>
+    <string name="DominateEveryRound">Entre na ação e domine todas as rodadas.</string>
+    <string name="IForgotMyPassword">Esqueci minha senha</string>
+    <string name="Login">Entrar</string>
+    <string name="DontHaveAccount">Ainda não tem uma conta?</string>
+    <string name="SignUp">Cadastre-Se</string>
+    <string name="ContinueWithGoogle">Continue com Google</string>
+    <string name="EnterYourEmail">Digite seu email</string>
+    <string name="EnterYourPassword">Digite sua senha</string>
+    <string name="CreateanAccount">Criar conta</string>
+    <string name="GoSmokeLine">Entre no SmokeLine e domine todas as rodadas.</string>
+    <string name="ConfirmPassword">Confirme Senha</string>
+    <string name="HaveAccount">Você já tem uma conta?</string>
+    <string name="Saved">Salvos</string>
+    <string name="Settings">configurações</string>
+    <string name="EditProfile">Editar Perfil</string>
+    <string name="LogOut">Sair da Conta</string>
+    <string name="SeeAll">VER TODOS</string>
+    <string name="SMOKETUTORIALS">Tutoriais de Smokes</string>
+    <string name="notifications">notificações</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
 </resources>

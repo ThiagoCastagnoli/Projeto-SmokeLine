@@ -11,12 +11,12 @@
 
     <item
         android:id="@id/mapasFragment"
-        android:title="Mapas"
+        android:title="@string/MAPS"
         android:icon="@drawable/mapa"/>
 
     <item
         android:id="@+id/salvosFragment"
-        android:title="Salvos"
+        android:title="@string/Saved"
         android:icon="@drawable/salvos"/>
 
 
@@ -28,7 +28,7 @@
 
     <item
         android:id="@id/configFragment"
-        android:title="Configurações"
+        android:title="@string/Settings"
         android:icon="@drawable/config"
         />
 
