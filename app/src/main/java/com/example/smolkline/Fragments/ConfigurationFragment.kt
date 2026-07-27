@@ -44,7 +44,7 @@ class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
             val idiomas = arrayOf("Português", "English")
 
             MaterialAlertDialogBuilder(requireContext())
-                .setTitle(getString(R.string.chooseTheLanguage))
+                .setTitle(getString(R.string.choose_the_language))
                 .setItems(idiomas) { _, which ->
 
                     when (which) {
@@ -81,7 +81,7 @@ class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
 
                 Toast.makeText(
                     requireContext(),
-                    "Logout realizado com sucesso!",
+                    getString(R.string.successfully_logged_out),
                     Toast.LENGTH_SHORT
                 ).show()
 

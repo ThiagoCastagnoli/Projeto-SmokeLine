@@ -27,7 +27,7 @@ class LoginFragment : Fragment(R.layout.home_page) {
                 if (task.isSuccessful){
                     Toast.makeText(
                         requireContext(),
-                        "Login realizado com sucesso",
+                        getString(R.string.login_successful),
                         Toast.LENGTH_SHORT
                     ).show()
                     findNavController().navigate(R.id.action_homepageFrament_to_home_screen)
@@ -94,7 +94,7 @@ class LoginFragment : Fragment(R.layout.home_page) {
 
             if (loginEmail.isEmpty() ) {
 
-                binding.tillEmailLog.error = getString(R.string.enterYourEmail)
+                binding.tillEmailLog.error = getString(R.string.enter_your_email)
 
             }
             else {
@@ -104,7 +104,7 @@ class LoginFragment : Fragment(R.layout.home_page) {
             }
              if (loginPassword.isEmpty()){
 
-                 binding.tillSenhaLog.error = getString(R.string.enterYourPassword)
+                 binding.tillSenhaLog.error = getString(R.string.enter_your_password)
 
 
                  progressBarLogin.visibility = View.GONE
@@ -122,14 +122,14 @@ class LoginFragment : Fragment(R.layout.home_page) {
                     .addOnCompleteListener { task ->
                         if(task.isSuccessful){
 
-                            Toast.makeText(requireContext(), "Login realizado com sucesso", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(requireContext(), getString(R.string.login_successful), Toast.LENGTH_SHORT).show()
                             findNavController().navigate(R.id.action_homepageFrament_to_home_screen)
 
                         }
 
                         else {
                             progressBarLogin.visibility = View.VISIBLE
-                            Toast.makeText(requireContext(), "email ou senha invalido ", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(requireContext(), getString(R.string.invalid_email_or_password), Toast.LENGTH_SHORT).show()
 
                         }
                         progressBarLogin.visibility = View.GONE

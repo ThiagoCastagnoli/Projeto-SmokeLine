@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="defaultWebClientId">SEU_WEB_CLIENT_ID_AQUI</string>
-    <string name="appName">SmokeLine</string>
+    <string name="default_web_client_id">SEU_WEB_CLIENT_ID_AQUI</string>
+    <string name="app_name">SmokeLine</string>
     <string name="login">Login</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="language">Language</string>
     <string name="maps">MAPS</string>
-    <string name="popularTutorials">POPULAR TUTORIALS</string>
-    <string name="dominateEveryRound">Get in on the action and dominate every round.</string>
-    <string name="iForgotMyPassword">I forgot my password</string>
-    <string name="dontHaveAccount">Don t have an account yet?</string>
-    <string name="signUp">Sign Up</string>
-    <string name="continueWithGoogle">Continue with Google</string>
-    <string name="enterYourEmail">Enter your email</string>
-    <string name="enterYourPassword">Enter your password</string>
-    <string name="createAnAccount">Create an account</string>
-    <string name="goSmokeLine">Enter SmokeLine and dominate every round.</string>
-    <string name="confirmPassword">Confirm password</string>
-    <string name="haveAccount">Do you already have an account?</string>
+    <string name="popular_tutorials">POPULAR TUTORIALS</string>
+    <string name="dominate_every_round">Get in on the action and dominate every round.</string>
+    <string name="i_forgot_my_password">I forgot my password</string>
+    <string name="dont_have_account">Don t have an account yet?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="create_an_account">Create an account</string>
+    <string name="go_smoke_line">Enter SmokeLine and dominate every round.</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="have_account">Do you already have an account?</string>
     <string name="saved">Saved</string>
     <string name="settings">Settings</string>
-    <string name="editProfile">Edit Profile</string>
-    <string name="logOut">Log Out</string>
-    <string name="seeAll">SEE ALL</string>
-    <string name="smokeTutorials">Smoke Tutorials</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="log_out">Log Out</string>
+    <string name="see_all">SEE ALL</string>
+    <string name="smoke_tutorials">Smoke Tutorials</string>
     <string name="notifications">Notifications</string>
-    <string name="yourFavoriteSmokes">Your Favorite Smokes</string>
-    <string name="chooseTheLanguage">Choose the language</string>
-
+    <string name="your_favorite_smokes">Your Favorite Smokes</string>
+    <string name="choose_the_language">Choose the language</string>
+    <string name="successfully_logged_out">Successfully logged out</string>
+    <string name="login_successful">Login successful</string>
+    <string name="invalid_email_or_password">Invalid email or password</string>
+    <string name="your_registration_was_successful">Your registration was successful.</string>
+    <string name="error_invalid_user_or_email">Error: Invalid user or email</string>
 </resources>
