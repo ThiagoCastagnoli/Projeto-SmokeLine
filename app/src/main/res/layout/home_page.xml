@@ -31,7 +31,6 @@
                     android:layout_height="200dp"
                     android:layout_marginTop="32dp"
                     android:adjustViewBounds="true"
-                    android:padding="20dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/logo_smoke"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="12dp"
-                android:text="Entre e domine cada rodada."
+                android:text="@string/dominate_every_round"
                 android:textColor="#A0A7B8"
                 android:textSize="16sp" />
 
@@ -130,7 +129,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
                         android:layout_marginTop="14dp"
-                        android:text="Esqueci minha senha"
+                        android:text="@string/i_forgot_my_password"
                         android:textColor="#2F80FF"
                         android:textSize="14sp"
                         android:textStyle="bold"/>
@@ -147,7 +146,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="58dp"
                     android:layout_marginTop="28dp"
-                    android:text="ENTRAR"
+                    android:text="@string/login"
                     android:textAllCaps="false"
                     android:textColor="#FFFFFF"
                     android:textSize="17sp"
@@ -178,15 +177,17 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Ainda não tem conta? "
+                            android:text="@string/dont_have_account"
                             android:textColor="#9B9B9B"
                             android:textSize="14sp"/>
 
                         <TextView
+                            android:layout_marginStart="10dp"
+                            android:padding="20dp"
                             android:id="@+id/txtRegister"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Cadastre-se"
+                            android:text="@string/sign_up"
                             android:textColor="#2F80FF"
                             android:textSize="14sp"
                             android:textStyle="bold"/>
@@ -215,7 +216,7 @@
                     android:id="@+id/btnGoogle"
                     android:layout_width="192dp"
                     android:layout_height="49dp"
-                    android:text="Continue com Google"
+                    android:text="@string/continue_with_google"
                     android:textAllCaps="false"
                     android:textColor="#FFFFFF"
                     android:textSize="10sp"

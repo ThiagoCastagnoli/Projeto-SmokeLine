@@ -1,8 +1,38 @@
 <resources>
+
     <string name="app_name">SmokeLine</string>
     <string name="default_web_client_id">SEU_WEB_CLIENT_ID_AQUI</string>
     <string name="login">Entrar</string>
     <string name="email">E-mail</string>
     <string name="password">Senha</string>
     <string name="language">Linguagem</string>
+    <string name="maps">MAPAS</string>
+    <string name="popular_tutorials">TUTORIAIS POPULARES</string>
+    <string name="dominate_every_round">Entre na ação e domine todas as rodadas.</string>
+    <string name="i_forgot_my_password">Esqueci minha senha</string>
+    <string name="dont_have_account">Ainda não tem uma conta?</string>
+    <string name="sign_up">Cadastre-Se</string>
+    <string name="continue_with_google">Continue com Google</string>
+    <string name="enter_your_email">Digite seu email</string>
+    <string name="enter_your_password">Digite sua senha</string>
+    <string name="create_an_account">Criar conta</string>
+    <string name="go_smoke_line">Entre no SmokeLine e domine todas as rodadas.</string>
+    <string name="confirm_password">Confirme sua Senha</string>
+    <string name="have_account">Você já tem uma conta?</string>
+    <string name="saved">Salvos</string>
+    <string name="settings">Configurações</string>
+    <string name="edit_profile">Editar Perfil</string>
+    <string name="log_out">Sair da Conta</string>
+    <string name="see_all">VER TODOS</string>
+    <string name="smoke_tutorials">Tutoriais de Smokes</string>
+    <string name="notifications">Notificações</string>
+    <string name="your_favorite_smokes">Suas smokes favoritas</string>
+    <string name="choose_the_language">Escolha o idioma</string>
+    <string name="successfully_logged_out">Logout realizado com sucesso</string>
+    <string name="login_successful">Login realizado com sucesso</string>
+    <string name="invalid_email_or_password">email ou senha invalido</string>
+    <string name="your_registration_was_successful">seu cadastro foi feito com Sucesso</string>
+    <string name="error_invalid_user_or_email">erro: Usuário ou E-mail invalido</string>
+
+
 </resources>

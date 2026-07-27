@@ -29,18 +29,13 @@
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp">
 
-                <ImageView
-                    android:id="@+id/btnBack"
-                    android:layout_width="26dp"
-                    android:layout_height="26dp"
-                    android:src="@android:drawable/ic_media_previous"
-                    app:tint="#FFFFFF"/>
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="14dp"
-                    android:text="Configurações"
+                    android:text="@string/settings"
                     android:textColor="#FFFFFF"
                     android:textSize="28sp"
                     android:textStyle="bold"/>
@@ -135,15 +130,11 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
-                            android:text="Editar Perfil"
+                            android:text="@string/edit_profile"
                             android:textColor="#FFFFFF"
                             android:textSize="16sp"/>
 
-                        <ImageView
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:src="@android:drawable/ic_media_next"
-                            app:tint="#6F7789"/>
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -166,15 +157,11 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
-                            android:text="Notificações"
+                            android:text="@string/notifications"
                             android:textColor="#FFFFFF"
                             android:textSize="16sp"/>
 
-                        <Switch
-                            android:id="@+id/switchNotifications"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:checked="true"/>
+
                     </LinearLayout>
 
                     <LinearLayout
@@ -187,22 +174,24 @@
                         android:padding="16dp">
 
 
-                        <TextView
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/idioma"
+                            app:tint="#2F80FF"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnLanguage"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:entries="@array/languages"
+                            android:textColor="@color/white"
+                            android:drawablePadding="8dp"
                             android:text="@string/language"
-                            android:textColor="#FFFFFF"
-                            android:textStyle="bold"
-                            android:textSize="14sp"
-                            android:layout_marginBottom="8dp"/>
+                            app:cornerRadius="12dp"
+                            android:layout_marginStart="20dp"
+                            android:backgroundTint="@color/black"/>
 
-                        <Spinner
-
-
-                            android:id="@+id/spinnerLanguage"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:entries="@array/languages" />
 
                     </LinearLayout>
 
@@ -232,7 +221,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="16dp"
                             android:layout_weight="1"
-                            android:text="Sair da Conta"
+                            android:text="@string/log_out"
                             android:textColor="#FF4D4D"
                             android:textSize="16sp"
                             android:textStyle="bold"/>

@@ -42,7 +42,7 @@ class CadastroFragment : Fragment(R.layout.cadastro_fragment) {
            val confirmSenha = binding.edtConfirmPassword.text.toString().trim()
 
             if( email.isEmpty() ){
-                binding.tilEmail.error = "Digite seu E-mail"
+                binding.tilEmail.error = getString(R.string.enter_your_email)
 
             }
             else {
@@ -50,13 +50,13 @@ class CadastroFragment : Fragment(R.layout.cadastro_fragment) {
             }
 
             if ( senha.isEmpty() ){
-                binding.tillSenha.error = "Digite sua Senha"
+                binding.tillSenha.error = getString(R.string.enter_your_password)
             }
             else {
                 binding.tillSenha.error = null
             }
              if ( confirmSenha.isEmpty() ){
-                binding.tillConSenha.error = "confirme sua Senha "
+                binding.tillConSenha.error = getString(R.string.confirm_password)
             }
 
             else {
@@ -64,11 +64,11 @@ class CadastroFragment : Fragment(R.layout.cadastro_fragment) {
                 auth.createUserWithEmailAndPassword(email, senha)
                 .addOnCompleteListener { task ->
                     if(task.isSuccessful){
-                        Toast.makeText(requireContext(), "seu cadastro foi feito com Sucesso", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(), getString(R.string.your_registration_was_successful), Toast.LENGTH_SHORT).show()
                         findNavController().navigate(R.id.action_cadastroFragment_to_home_screen)
                     }
                     else {
-                        Toast.makeText(requireContext(), "erro: Usuário ou E-mail invalido ", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(requireContext(), getString(R.string.error_invalid_user_or_email), Toast.LENGTH_SHORT).show()
                     }
                     progressBarCadastro.visibility = View.GONE
                 }}
