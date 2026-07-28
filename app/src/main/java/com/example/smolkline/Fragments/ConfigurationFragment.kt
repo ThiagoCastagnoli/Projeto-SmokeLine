@@ -17,13 +17,38 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.firebase.auth.FirebaseAuth
+import com.example.smolkline.screens.ConfigurationScreen
+import androidx.compose.ui.platform.ViewCompositionStrategy
 
 class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
+
+    private fun mudarIdioma(language: String) {
+        val appLocale = LocaleListCompat.forLanguageTags(language)
+        AppCompatDelegate.setApplicationLocales(appLocale)
+    }
 
     private var _binding: ConfigurationFragmentBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var googleSignInClient: GoogleSignInClient
+
+    private fun mostrarDialogIdioma() {
+
+        val idiomas = arrayOf("Português", "English")
+
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(getString(R.string.choose_the_language))
+            .setItems(idiomas) { _, which ->
+
+                when (which) {
+                    0 -> mudarIdioma("pt-BR")
+                    1 -> mudarIdioma("en")
+                }
+            }
+            .show()
+    }
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -32,27 +57,24 @@ class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
         _binding = ConfigurationFragmentBinding.bind(view)
 
 
-        fun mudarIdioma(language: String) {
 
-            val appLocale = LocaleListCompat.forLanguageTags(language)
 
-            AppCompatDelegate.setApplicationLocales(appLocale)
-        }
 
-        binding.btnLanguage.setOnClickListener {
+        binding.composeView.apply {
+            setViewCompositionStrategy(
+                ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed
+            )
 
-            val idiomas = arrayOf("Português", "English")
-
-            MaterialAlertDialogBuilder(requireContext())
-                .setTitle(getString(R.string.choose_the_language))
-                .setItems(idiomas) { _, which ->
-
-                    when (which) {
-                        0 -> mudarIdioma("pt-BR")
-                        1 -> mudarIdioma("en")
+            setContent {
+                ConfigurationScreen(
+                    onChangeLanguage = {
+                        mostrarDialogIdioma()
+                    },
+                    onLogout = {
+                        logout()
                     }
-                }
-                .show()
+                )
+            }
         }
 
 
@@ -66,9 +88,7 @@ class ConfigurationFragment : Fragment(R.layout.configuration_fragment) {
 
         googleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
 
-        binding.sairdaconta.setOnClickListener {
-            logout()
-        }
+
     }
 
     private fun logout() {
