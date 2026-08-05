@@ -70,13 +70,10 @@ fun ConfigurationScreen(
         fontWeight = FontWeight.Bold,
         color = Color.White
     )
-        Spacer(modifier = Modifier
-            .height(28.dp))
+
 
         UserCard()
 
-        Spacer(modifier = Modifier
-            .height(22.dp))
 
         SettingsCard(
             onChangeLanguage = onChangeLanguage,
@@ -94,7 +91,9 @@ private fun UserCard(){
 
     Card(
         modifier = Modifier
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .padding(top = 20.dp, start = 20.dp,
+                end = 20.dp),
         shape = RoundedCornerShape(22.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color(0xFF041846)
@@ -113,6 +112,7 @@ private fun UserCard(){
         ) {
 
     Box(modifier = Modifier
+        .padding(end = 10.dp)
         .size(42.dp)
         .background(
             Color.White,
@@ -121,9 +121,11 @@ private fun UserCard(){
     )
 
 
-            Spacer(modifier = Modifier.width(22.dp))
 
-          Column() {
+
+          Column(modifier = Modifier
+              .padding(top = 10.dp)
+              .padding(bottom = 10.dp)) {
               Text(
                   text = "Thiaguinho",
                   fontSize = 22.sp,
@@ -131,8 +133,7 @@ private fun UserCard(){
                   color = Color.White
               )
 
-              Spacer(modifier = Modifier
-                  .width(22.dp))
+
 
               Text(
                   text = stringResource(R.string.email),
@@ -155,7 +156,9 @@ private fun SettingsCard(
 ){
 
     Card(modifier = Modifier
-        .fillMaxWidth(),
+        .fillMaxWidth()
+        .padding(top = 20.dp,
+            start = 20.dp, end = 20.dp),
         shape = RoundedCornerShape(20.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color(0xFF041846)
@@ -169,20 +172,23 @@ private fun SettingsCard(
             )
         ) {
             SettingRow(
+
+                modifier = Modifier
+                    .padding(bottom = 10.dp),
                 icon = Icons.Default.Edit,
                 iconColor = Color(0xff2e73ff),
                 text = stringResource(R.string.edit_profile)
             )
-            Spacer(modifier = Modifier
-                .height(20.dp))
+
 
             SettingRow(
+                modifier = Modifier
+                    .padding(top = 10.dp),
                 icon = Icons.Default.Info,
                 iconColor = Color(0xff2e73ff),
                 text = stringResource(R.string.notifications)
             )
-            Spacer(modifier = Modifier
-                .height(20.dp))
+
 
             Row(verticalAlignment = Alignment.CenterVertically) {
 
@@ -190,12 +196,15 @@ private fun SettingsCard(
                     imageVector = Icons.Default.Language,
                     contentDescription = null,
                     tint = Color(0xff2e73ff),
-                    modifier = Modifier.size(16.dp)
+                    modifier = Modifier
+                        .size(30.dp)
+                        .padding(end = 5.dp)
                 )
-                Spacer(modifier = Modifier
-                    .width(16.dp))
+
 
                 Button(
+                    modifier = Modifier
+                        .padding(start = 15.dp),
                     onClick = onChangeLanguage,
                     shape = RoundedCornerShape(14.dp),
                     colors = ButtonDefaults.buttonColors(
@@ -212,20 +221,23 @@ private fun SettingsCard(
                     )
                 }
             }
-            Spacer(modifier = Modifier.height(28.dp))
+
 
             Row(verticalAlignment = Alignment.CenterVertically) {
 
                 Icon(
                     imageVector = Icons.Default.PowerSettingsNew,
                     contentDescription = null,
-                    modifier = Modifier.size(25.dp)
+                    modifier = Modifier
+                        .size(35.dp)
+                        .padding(end = 5.dp, top = 5.dp)
                 )
 
-                Spacer(modifier = Modifier.width(16.dp))
+
 
                 Button(onClick = onLogout,
                     modifier = Modifier
+                        .padding(top = 20.dp, start = 10.dp)
                         .fillMaxWidth(),
                     shape = RoundedCornerShape(18.dp),
                     colors = ButtonDefaults.buttonColors(
@@ -246,7 +258,8 @@ private fun SettingsCard(
 private fun SettingRow(
     icon: ImageVector,
     iconColor: Color,
-    text: String
+    text: String,
+    modifier: Modifier
 ){
 
     Row(
@@ -261,9 +274,12 @@ private fun SettingRow(
                 .size(26.dp)
         )
 
-        Spacer(modifier = Modifier.width(15.dp))
 
-        Text(text = text,
+
+        Text(
+            modifier = Modifier
+                .padding(20.dp),
+            text = text,
             fontSize = 20.sp,
             color = Color.White)
 
