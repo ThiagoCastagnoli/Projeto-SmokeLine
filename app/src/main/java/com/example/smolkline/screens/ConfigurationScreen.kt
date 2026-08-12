@@ -5,6 +5,8 @@ import android.widget.Button
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -52,58 +54,53 @@ import kotlinx.coroutines.flow.merge
 @Composable
 fun ConfigurationScreen(
     onChangeLanguage: () -> Unit,
-    onLogout: () -> Unit
+    onLogout: () -> Unit,
+    modifier: Modifier
 ) {
-
-    Box(modifier = Modifier
-        .fillMaxSize()){
+    Box(
+            modifier = modifier
+                .fillMaxSize()){
         Image(
             painter = painterResource(id = R.drawable.backgorund_login),
             contentDescription = null,
-            modifier = Modifier.fillMaxSize(),
+            modifier = modifier
+                .fillMaxSize(),
             contentScale = ContentScale.Crop)
     }
-    Column() {
-    Text(stringResource(R.string.settings),
-        modifier = Modifier.padding(start = 20.dp, top = 10.dp) ,
-        fontSize = 34.sp,
-        fontWeight = FontWeight.Bold,
-        color = Color.White
+    Column {
+        Text(stringResource(R.string.settings),
+            modifier = modifier
+                .padding(start = 20.dp, top = 10.dp) ,
+            fontSize = 34.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color.White
     )
 
-
-        UserCard()
-
+        UserCard(modifier = Modifier)
 
         SettingsCard(
             onChangeLanguage = onChangeLanguage,
-            onLogout = onLogout
+            onLogout = onLogout,
+            modifier = modifier
         )
-
     }
-
-
 }
-
 @Composable
-private fun UserCard(){
-
+private fun UserCard(modifier: Modifier){
 
     Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(top = 20.dp, start = 20.dp,
+            modifier = modifier
+                .fillMaxWidth()
+                .padding(top = 20.dp, start = 20.dp,
                 end = 20.dp),
-        shape = RoundedCornerShape(22.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = Color(0xFF041846)
-        ),
-        border = BorderStroke(
+            shape = RoundedCornerShape(22.dp),
+            colors = CardDefaults.cardColors(
+            containerColor = Color(0xFF041846) ),
+            border = BorderStroke(
             1.dp,
-            Color.White.copy(alpha = .08f)
+                Color.White.copy(alpha = .08f)
         )
     ) {
-
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -111,7 +108,8 @@ private fun UserCard(){
             verticalAlignment = Alignment.CenterVertically
         ) {
 
-    Box(modifier = Modifier
+    Box(
+        modifier = Modifier
         .padding(end = 10.dp)
         .size(42.dp)
         .background(
@@ -119,10 +117,6 @@ private fun UserCard(){
             RoundedCornerShape(2.dp)
         )
     )
-
-
-
-
           Column(modifier = Modifier
               .padding(top = 10.dp)
               .padding(bottom = 10.dp)) {
@@ -132,55 +126,46 @@ private fun UserCard(){
                   fontWeight = FontWeight.Bold,
                   color = Color.White
               )
-
-
-
               Text(
                   text = stringResource(R.string.email),
                   fontSize = 15.sp,
                   color = Color.White
               )
           }
-
-
-
         }
-
     }
-
 }
 @Composable
 private fun SettingsCard(
     onChangeLanguage: () -> Unit,
-    onLogout: () -> Unit
+    onLogout: () -> Unit,
+    modifier: Modifier
 ){
-
-    Card(modifier = Modifier
+    Card(modifier = modifier
         .fillMaxWidth()
-        .padding(top = 20.dp,
-            start = 20.dp, end = 20.dp),
+        .padding(
+            top = 20.dp,
+            start = 20.dp,
+            end = 20.dp),
         shape = RoundedCornerShape(20.dp),
         colors = CardDefaults.cardColors(
             containerColor = Color(0xFF041846)
         )
     ) {
-
-        Column( modifier = Modifier
+        Column(
+            modifier = modifier
             .padding(
                 horizontal = 18.dp,
                 vertical = 18.dp
             )
         ) {
             SettingRow(
-
                 modifier = Modifier
                     .padding(bottom = 10.dp),
                 icon = Icons.Default.Edit,
                 iconColor = Color(0xff2e73ff),
                 text = stringResource(R.string.edit_profile)
             )
-
-
             SettingRow(
                 modifier = Modifier
                     .padding(top = 10.dp),
@@ -188,10 +173,7 @@ private fun SettingsCard(
                 iconColor = Color(0xff2e73ff),
                 text = stringResource(R.string.notifications)
             )
-
-
             Row(verticalAlignment = Alignment.CenterVertically) {
-
                 Icon(
                     imageVector = Icons.Default.Language,
                     contentDescription = null,
@@ -200,8 +182,6 @@ private fun SettingsCard(
                         .size(30.dp)
                         .padding(end = 5.dp)
                 )
-
-
                 Button(
                     modifier = Modifier
                         .padding(start = 15.dp),
@@ -221,10 +201,7 @@ private fun SettingsCard(
                     )
                 }
             }
-
-
             Row(verticalAlignment = Alignment.CenterVertically) {
-
                 Icon(
                     imageVector = Icons.Default.PowerSettingsNew,
                     contentDescription = null,
@@ -232,9 +209,6 @@ private fun SettingsCard(
                         .size(35.dp)
                         .padding(end = 5.dp, top = 5.dp)
                 )
-
-
-
                 Button(onClick = onLogout,
                     modifier = Modifier
                         .padding(top = 20.dp, start = 10.dp)
@@ -248,11 +222,9 @@ private fun SettingsCard(
                         color = Color(0xFFE53935),
                         fontWeight = FontWeight.Bold)
                 }
-
             }
         }
     }
-
 }
 @Composable
 private fun SettingRow(
@@ -261,11 +233,9 @@ private fun SettingRow(
     text: String,
     modifier: Modifier
 ){
-
     Row(
         verticalAlignment = Alignment.CenterVertically
     ){
-
         Icon(
             imageVector = icon,
             contentDescription = null,
@@ -273,26 +243,22 @@ private fun SettingRow(
             modifier = Modifier
                 .size(26.dp)
         )
-
-
-
         Text(
-            modifier = Modifier
+            modifier = modifier
                 .padding(20.dp),
             text = text,
             fontSize = 20.sp,
             color = Color.White)
-
     }
 }
-
 @Preview(showBackground = true)
 @Composable
 fun ConfigurationScreenPreview() {
     SmolkLineTheme {
         ConfigurationScreen(
             onChangeLanguage = {},
-            onLogout = {}
+            onLogout = {},
+            modifier = Modifier
         )
     }
 }
