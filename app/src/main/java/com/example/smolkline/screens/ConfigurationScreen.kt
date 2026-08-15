@@ -47,7 +47,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.smolkline.R
-import com.example.smolkline.ui.theme.SmolkLineTheme
+import com.example.smolkline.ui.theme.SmokeLineThemes
 import kotlinx.coroutines.flow.merge
 
 
@@ -254,7 +254,7 @@ private fun SettingRow(
 @Preview(showBackground = true)
 @Composable
 fun ConfigurationScreenPreview() {
-    SmolkLineTheme {
+    SmokeLineThemes() {
         ConfigurationScreen(
             onChangeLanguage = {},
             onLogout = {},
